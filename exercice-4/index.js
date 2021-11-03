@@ -1,44 +1,33 @@
-// Exercice 1
-class MyMorpionXO {
-  constructor(sum, nbr) {
-    this.sum = sum;
-    this.nbr = nbr;
-    this.el = document.querySelector('#app');
+const selectMap = document.querySelector("object");
+console.log(selectMap)
+const selectLegend = document.querySelector("object.legend");
+console.log(selectLegend)
+const selectPaths = selectMap.querySelector("svg").contentDocument;
 
-    this.run();
-  }
+selectPaths.forEach(function (path) {
+  path.addEventListener(
+    "mouseenter",
+    function (e){
+      if (e.target.style.fill !== "red"){
+        e.target.style.fill = "blue";
 
-  getRandomTimer() {
-    return Math.random() * (2000 - 1000) + 1000;
-  }
-
-  getRandomHexa() {
-    return `#${Math.floor(Math.random()*16777215).toString(16)}`;
-  }
-
-  render() {
-    var i = 0;
-    if (i == 0) {
-      i = 1;
-      var elem = document.getElementById("myBar");
-      var width = this.nbr;
-      var id = setInterval(frame, this.sum);
-      console.log(width)
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-        } else {
-          width++;
-          elem.style.width = width + "%";
-        }
+        const landName = e.target.id;
+        selectLegend.textContent = landName;
       }
+      false
     }
-    this.el.appendChild(table);
-  }
-  run() {
-    this.render();
-  }
-}
+  );
+  
+  path.EventListener(
+    "mouseout",
+    function (e){
+      if (e.target.style.fill !== "blue"){
+        e.target.style.fill = "grey";
 
-const bar = new MyMorpionXO(50, 1);
+        const landName = e.target.id;
+        selectLegend.textContent = landName;
+      }
+      false
+    }
+  );
+})
