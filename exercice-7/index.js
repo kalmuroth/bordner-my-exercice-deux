@@ -4,7 +4,7 @@ function computeNotes(array) {
 		somme += array[i];
 	}
 	moyenne = somme/i;
-    console.log(moyenne);
+    alert(moyenne);
     return moyenne;
 }
 

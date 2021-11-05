@@ -14,4 +14,4 @@ class drawBar {
 	}
 }
 
-const bar = new drawBar(5000, 1000);
+const bar = new drawBar(5000, 3000);
