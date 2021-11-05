@@ -93,12 +93,6 @@ class MyMorpionXO {
 
   combinationWin() {
        this.buttonCell = document.querySelectorAll("button");
-       console.log(this.buttonCell);
-       if (this.buttonCell[0].textContent.length == 1 && this.buttonCell[1].textContent.length == 1 && this.buttonCell[2].textContent.length == 1 && this.buttonCell[3].textContent.length == 1 && this.buttonCell[4].textContent.length == 1 && this.buttonCell[5].textContent.length == 1 && this.buttonCell[6].textContent.length == 1 && this.buttonCell[7].textContent.length == 1 && this.buttonCell[8].textContent.length == 1) {
-            this.endGame = true;
-            return false;
-
-       }
        if (this.buttonCell[0].textContent == this.currentPlayer && this.buttonCell[1].textContent == this.currentPlayer && this.buttonCell[2].textContent == this.currentPlayer) {
             this.endGame = true;
             return true;
@@ -132,6 +126,11 @@ class MyMorpionXO {
             return true;
 
        }
+       if (this.buttonCell[0].textContent.length == 1 && this.buttonCell[1].textContent.length == 1 && this.buttonCell[2].textContent.length == 1 && this.buttonCell[3].textContent.length == 1 && this.buttonCell[4].textContent.length == 1 && this.buttonCell[5].textContent.length == 1 && this.buttonCell[6].textContent.length == 1 && this.buttonCell[7].textContent.length == 1 && this.buttonCell[8].textContent.length == 1) {
+          this.endGame = true;
+          return false;
+
+     }
   }
 
   reset() {
