@@ -1,10 +1,8 @@
-#myProgress {
-  width: 100%;
-  background-color: grey;
-}
 
 #myBar {
   width: 1%;
   height: 30px;
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  flex-direction: column;
+	width: 100%;
+  display: flex;
 }

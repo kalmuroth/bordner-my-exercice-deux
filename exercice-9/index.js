@@ -19,6 +19,7 @@ function checkPalindrome() {
                 return true 
             }
             else{
+                alert("false")
                 return false 
             }
         }

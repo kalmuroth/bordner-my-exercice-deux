@@ -8,6 +8,10 @@ function checkPhoneNumber() {
       alert("true")
       return true;
     }
+    else {
+      alert("false")
+      return false;
+    }
   })
 }
 

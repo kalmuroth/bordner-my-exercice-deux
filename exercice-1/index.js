@@ -4,7 +4,6 @@ class gridGenerator {
     this.xAxis = xAxis;
     this.yAxis = yAxis;
     this.el = document.querySelector('#app');
-
     this.run();
   }
 
@@ -24,7 +23,6 @@ class gridGenerator {
 
       for (let j = 0; j < this.yAxis; j += 1) {
         const td = document.createElement('td');
-
         td.style.padding = "20px";
         td.style.border = "12px solid black";
 

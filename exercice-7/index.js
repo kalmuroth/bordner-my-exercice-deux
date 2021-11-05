@@ -1,16 +1,11 @@
-function computeNotes() {
-    const loginForm = document.getElementById("login-form");
-    const loginButton = document.getElementById("login-form-submit");
-
-    loginButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        const francais = loginForm.francais.value;
-        const math = loginForm.math.value;
-        const anglais = loginForm.anglais.value;
-        const sum = Math.round((parseInt(francais) + parseInt(math) + parseInt(anglais))/3)
-        alert(sum)
-        return sum
-    })
+function computeNotes(array) {
+	let somme = 0;
+ 	for (i = 0; i < array.length; i++) {
+		somme += array[i];
+	}
+	moyenne = somme/i;
+    console.log(moyenne);
+    return moyenne;
 }
 
-computeNotes()
+computeNotes([2, 3, 10, 14, 18])
